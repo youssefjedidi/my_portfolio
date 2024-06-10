@@ -151,7 +151,7 @@ export const ContactUs = () => {
               ></textarea>
               <br />
               <Row>
-                <Col lg="12" className="form-group">
+              <Col lg="12" className="form-group">
                   <button className="btn ac_btn" type="submit">
                     {formData.loading ? "Sending..." : "Send"}
                   </button>
