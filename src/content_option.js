@@ -12,7 +12,7 @@ const introdata = {
         third: "I develop mobile apps",
     },
     description: "Hello! I'm Youssef Jedidi, a Computer Engineering student at Concordia University with a passion for innovative software development, specializing in machine learning, deep learning, and web development.    ",
-    your_img_url: "https://images.unsplash.com/photo-1514790193030-c89d266d5a9d",
+    your_img_url: "\landingpic.jpg",
 };
 
 const dataabout = {
