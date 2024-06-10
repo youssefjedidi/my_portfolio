@@ -1,29 +1,29 @@
-const logotext = "JOHN";
+const logotext = "YJ";
 const meta = {
-    title: "John Doe",
-    description: "I’m John Doe data scientist _ Full stack devloper,currently working in Berlin",
+    title: "Youssef Jedidi",
+    description: "I’m Youssef Jedidi data scientist _ Full stack devloper,currently working in Montreal",
 };
 
 const introdata = {
-    title: "I’m John Doe",
+    title: "I’m Youssef Jedidi",
     animated: {
         first: "I love coding",
         second: "I code cool websites",
         third: "I develop mobile apps",
     },
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum",
+    description: "Hello! I'm Youssef Jedidi, a Computer Engineering student at Concordia University with a passion for innovative software development, specializing in machine learning, deep learning, and web development.    ",
     your_img_url: "https://images.unsplash.com/photo-1514790193030-c89d266d5a9d",
 };
 
 const dataabout = {
-    title: "abit about my self",
+    title: "a bit about my self",
     aboutme: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis dolor id ligula semper elementum feugiat pretium nulla. Nunc non commodo dolor. Nunc mollis dignissim facilisis. Morbi ut magna ultricies.",
 };
 const worktimeline = [{
-        jobtitle: "Designer of week",
-        where: "YAdfi",
-        date: "2020",
-    },
+        jobtitle: "Software Developper",
+        where: "Space Concordia",
+        date: "2022-current",
+    }/*,
     {
         jobtitle: "Designer of week",
         where: "Jamalya",
@@ -33,7 +33,7 @@ const worktimeline = [{
         jobtitle: "Designer of week",
         where: "ALquds",
         date: "2019",
-    },
+    },*/
 ];
 
 const skills = [{
@@ -75,7 +75,7 @@ const services = [{
 const dataportfolio = [{
         img: "https://picsum.photos/400/?grayscale",
         description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
+        link: "1",
     },
     {
         img: "https://picsum.photos/400/800/?grayscale",
@@ -90,9 +90,9 @@ const dataportfolio = [{
     {
         img: "https://picsum.photos/400/600/?grayscale",
         description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
+        link: "2",
     },
-    {
+    /*{
         img: "https://picsum.photos/400/300/?grayscale",
         description: "The wisdom of life consists in the elimination of non-essentials.",
         link: "#",
@@ -127,7 +127,7 @@ const dataportfolio = [{
         img: "https://picsum.photos/400/?grayscale",
         description: "The wisdom of life consists in the elimination of non-essentials.",
         link: "#",
-    },
+    },*/
     {
         img: "https://picsum.photos/400/700/?grayscale",
         description: "The wisdom of life consists in the elimination of non-essentials.",
@@ -136,21 +136,21 @@ const dataportfolio = [{
 ];
 
 const contactConfig = {
-    YOUR_EMAIL: "name@domain.com",
-    YOUR_FONE: "(555)123-4567",
+    YOUR_EMAIL: "youssefjedidi2022@gmail.com",
+    YOUR_FONE: "(514)346-7980",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vehicula eu nunc et sollicitudin. Cras pulvinar, nisi at imperdiet pharetra. ",
     // creat an emailjs.com account 
     // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
-    YOUR_SERVICE_ID: "service_id",
-    YOUR_TEMPLATE_ID: "template_id",
-    YOUR_USER_ID: "user_id",
+    YOUR_SERVICE_ID: "service_upiqsbk",
+    YOUR_TEMPLATE_ID: "template_gn0t00c",
+    YOUR_USER_ID: "nWW-hP5g0boErypRe",
 };
 
 const socialprofils = {
-    github: "https://github.com",
-    facebook: "https://facebook.com",
-    linkedin: "https://linkedin.com",
-    twitter: "https://twitter.com",
+    github: "https://github.com/youssefjedidi",
+    //facebook: "https://facebook.com",
+    linkedin: "https://linkedin.com/in/youssef-jedidi",
+    //twitter: "https://twitter.com",
 };
 export {
     meta,
