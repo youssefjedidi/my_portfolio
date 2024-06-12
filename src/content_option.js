@@ -65,7 +65,7 @@ const services = [{
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
     },
     {
-        title: "Mobile Apps",
+        title: "AI and ML development",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
     },
     {
@@ -102,9 +102,9 @@ const dataportfolio = [
         link: "2",
     },
     {
-        img: "https://picsum.photos/400/300/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
+        img: "/images/gamejam.jpg",
+        description: '  "A New Dawn" is a 2D Unity game developed for the Brackeys Game Jam 2023.1 competition"',
+        link: "https://github.com/youssefjedidi/A_New_Dawn",
     },/*
     {
         img: "https://picsum.photos/400/700/?grayscale",
