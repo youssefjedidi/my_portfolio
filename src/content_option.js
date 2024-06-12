@@ -72,21 +72,23 @@ const services = [{
     },
 ];
 
-const dataportfolio = [{
+const dataportfolio = [
+    {
+    img: "/images/abc_bank.jpg",
+    description: "The wisdom of life consists in the elimination of non-essentials.",
+    link: "https://github.com/youssefjedidi/bank_marketing_AI",
+},
+{
     img: "/images/mlair.jpeg",
     description: "Machine Learning Regression Models for Aircraft Noise Prediction",
     link: "https://github.com/youssefjedidi/Aircraft_Noise_Predictor",
     },
     {
         img: "/images/tunweb.png",
-        description: "a website about Tunisia , The wisdom of life consists in the elimination of non-essentials.",
+        description: "a website about Tunisia , built using React framework, aiming to showcase information about Tunisian history, culture, and tourism.",
         link: "https://github.com/youssefjedidi/Tun_App",
     },
-    {
-        img: "https://picsum.photos/400/800/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
+    
     {
         img: "https://picsum.photos/400/?grayscale",
         description: "The wisdom of life consists in the elimination of non-essentials.",
