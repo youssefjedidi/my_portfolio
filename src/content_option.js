@@ -7,9 +7,11 @@ const meta = {
 const introdata = {
     title: "I’m Youssef Jedidi",
     animated: {
-        first: "I love coding",
-        second: "I code cool websites",
-        third: "I develop mobile apps",
+        first: "I develop efficient software",
+        second: "I specialize in AI and ML",
+        third: "I drive results with digital marketing.",
+        fourth: "I design user-centric websites.",
+        fifth: "I turn data into insights.",
     },
     description: "Hello! I'm Youssef Jedidi, a Computer Engineering student at Concordia University with a passion for innovative software development, specializing in machine learning, deep learning, and web development.    ",
     your_img_url: "/images/landingpic.jpg",
