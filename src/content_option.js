@@ -75,7 +75,7 @@ const services = [{
 const dataportfolio = [
     {
     img: "/images/abc_bank.jpg",
-    description: "The wisdom of life consists in the elimination of non-essentials.",
+    description: "ABC Bank Digital Marketing Strategy by utilizing Artificial Intelligence (AI)/  unsupervised learning for cutomer segmentation",
     link: "https://github.com/youssefjedidi/bank_marketing_AI",
 },
 {
