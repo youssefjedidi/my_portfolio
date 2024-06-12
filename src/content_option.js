@@ -75,7 +75,7 @@ const services = [{
 const dataportfolio = [
     {
     img: "/images/abc_bank.jpg",
-    description: "ABC Bank Digital Marketing Strategy by utilizing Artificial Intelligence (AI)/  unsupervised learning for cutomer segmentation",
+    description: "ABC Bank Digital Marketing Strategy by utilizing Artificial Intelligence (AI)/  unsupervised learning for customer segmentation",
     link: "https://github.com/youssefjedidi/bank_marketing_AI",
 },
 {
