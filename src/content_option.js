@@ -90,7 +90,7 @@ const dataportfolio = [
         description: "a website about Tunisia , built using React framework, aiming to showcase information about Tunisian history, culture, and tourism.",
         link: "https://github.com/youssefjedidi/Tun_App",
     },
-    
+    /*
     {
         img: "https://picsum.photos/400/?grayscale",
         description: "The wisdom of life consists in the elimination of non-essentials.",
@@ -100,7 +100,7 @@ const dataportfolio = [
         img: "https://picsum.photos/400/600/?grayscale",
         description: "The wisdom of life consists in the elimination of non-essentials.",
         link: "2",
-    },
+    },*/
     {
         img: "/images/gamejam.jpg",
         description: '  "A New Dawn" is a 2D Unity game developed for the Brackeys Game Jam 2023.1 competition"',
