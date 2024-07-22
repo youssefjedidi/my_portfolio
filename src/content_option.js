@@ -21,16 +21,18 @@ const dataabout = {
     title: "a bit about my self",
     aboutme: "",
 };
-const worktimeline = [{
+const worktimeline = [
+    {
+    jobtitle: "Software Engineering (SWE) Fellow",
+    where: "Headstarter AI",
+    date: "2024",
+    },
+    {
         jobtitle: "Software Developper",
         where: "Space Concordia",
         date: "2022-current",
-    }/*,
-    {
-        jobtitle: "Designer of week",
-        where: "Jamalya",
-        date: "2019",
     },
+    /*
     {
         jobtitle: "Designer of week",
         where: "ALquds",
@@ -60,13 +62,13 @@ const skills = [{
     },
 ];
 
-const services = [{
+const services = [/*{
         title: "UI & UX Design",
         description: "",
-    },
+    },*/
     {
         title: "AI and ML development",
-        description: "",
+        description: [" - Machine Learning A-Z By Udemy"," Neural Networks and Deep Learning By DeepLearning.AI, AWS Educate Machine Learning Foundations By Amazon Web Services (AWS), Disaster Risk Monitoring Using Satellite Imagery by NVIDIA,"," Structuring Machine Learning Projects By DeepLearning.AI",]
     },
     {
         title: "Web development",
