@@ -57,7 +57,7 @@ export const Portfolio = () => {
           <Col lang="5">
             <h3 className="color_sec py-4">Certificates</h3>
           </Col>
-          <Col lg="7">
+          <Col lg="10">
           
               {services.map((data, i) => {
                 return (

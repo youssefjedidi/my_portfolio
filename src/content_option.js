@@ -75,8 +75,14 @@ const services = [/*{
             "- Structuring Machine Learning Projects By DeepLearning.AI",]
     },
     {
-        title: "Web development",
-        description: [""],
+        title: "Software development",
+        description:  [ "- Foundations of Cybersecurity By Google",
+            "- AWS Introduction | Initiation à AWS By CMAI - Canadian Mobility and Aerospace Institute (IMACA)",
+            "- Software Engineering Job Simulation By Goldman Sachs", 
+            "- Data Analytics and Visualization Job Simulation by Accenture North America" , 
+            "- Intro. to Game Development by GOMYCODE", 
+            "- Digital Marketing By Accenture", 
+            "- Learn to Program: The Fundamentals by University of Toronto"],
     },
 ];
 
