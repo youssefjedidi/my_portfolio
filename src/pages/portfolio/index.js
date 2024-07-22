@@ -58,14 +58,20 @@ export const Portfolio = () => {
             <h3 className="color_sec py-4">Certificates</h3>
           </Col>
           <Col lg="7">
-            {services.map((data, i) => {
-              return (
-                <div className="service_ py-4" key={i}>
-                  <h5 className="service__title">{data.title}</h5>
-                  <p className="service_desc">{data.description}</p>
-                </div>
-              );
-            })}
+          
+              {services.map((data, i) => {
+                return (
+                  <div className="service_ py-4" key={i}>
+                    <h5 className="service__title">{data.title}</h5>
+                    <ul className="service_desc">
+                      {data.description.map((desc, index) => (
+                        <li key={index}>{desc}</li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              })}
+
           </Col>
         </Row>
         </Row>    

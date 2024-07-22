@@ -68,11 +68,15 @@ const services = [/*{
     },*/
     {
         title: "AI and ML development",
-        description: [" - Machine Learning A-Z By Udemy"," Neural Networks and Deep Learning By DeepLearning.AI, AWS Educate Machine Learning Foundations By Amazon Web Services (AWS), Disaster Risk Monitoring Using Satellite Imagery by NVIDIA,"," Structuring Machine Learning Projects By DeepLearning.AI",]
+        description: ["- Machine Learning A-Z By Udemy",
+            "- Neural Networks and Deep Learning By DeepLearning.AI",
+            "- AWS Educate Machine Learning Foundations By Amazon Web Services (AWS)",
+            "- Disaster Risk Monitoring Using Satellite Imagery by NVIDIA,",
+            "- Structuring Machine Learning Projects By DeepLearning.AI",]
     },
     {
         title: "Web development",
-        description: "",
+        description: [""],
     },
 ];
 
