@@ -19,6 +19,7 @@ export const Portfolio = () => {
           <meta name="description" content={meta.description} />
         </Helmet>
         <Row className="mb-5 mt-3 pt-md-3">
+        <div style={{ display: "none" }}>
         <Col lg="5">
             <h1 className="color_sec py-4"> Work Timline </h1>{" "}
           </Col>
@@ -35,6 +36,7 @@ export const Portfolio = () => {
                 })}
               </tbody>
             </table>
+            </div>
           <Col lg="8">
             <h1 className="display-4 mb-4"> Projects </h1>{" "}
             <hr className="t_border my-4 ml-0 text-left" />
