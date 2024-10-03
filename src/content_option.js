@@ -93,15 +93,15 @@ const dataportfolio = [
     link: "https://github.com/youssefjedidi/bank_marketing_AI",
 },
 {
+    img: "/images/HeartXAI.jpeg",
+    description: "Heart Attack Dataset Analysis XAI (explainable artificial intelligence) Project",
+    link: "https://github.com/youssefjedidi/XAI_heart_attack_classifier",
+},
+{
     img: "/images/mlair.jpeg",
     description: "Green Aircraft Design Project",
     link: "https://github.com/youssefjedidi/Aircraft_Noise_Predictor",
-    },
-    {
-        img: "/images/HeartXAI.jpeg",
-        description: "Heart Attack Dataset Analysis XAI (explainable artificial intelligence) Project",
-        link: "https://github.com/youssefjedidi/XAI_heart_attack_classifier",
-    },
+    },   
     {
         img: "/images/tunweb.png",
         description: "a website about Tunisia , built using React framework, aiming to showcase information about Tunisian history, culture, and tourism.",
