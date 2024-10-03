@@ -43,7 +43,7 @@ export const Portfolio = () => {
                 </h2>
         <div /*style={{ display: "none" }}*/>
         <Col lg="5">
-            <h1 className="color_sec py-4"> Work Timline </h1>{" "}
+            <h1 className="color_sec py-4"> Experience </h1>{" "}
           </Col>
           
         </div>
