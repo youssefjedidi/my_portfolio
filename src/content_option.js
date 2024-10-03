@@ -98,16 +98,16 @@ const dataportfolio = [
     link: "https://github.com/youssefjedidi/Aircraft_Noise_Predictor",
     },
     {
+        img: "/images/HeartXAI.jpeg",
+        description: "Heart Attack Dataset Analysis XAI (explainable artificial intelligence) Project",
+        link: "https://github.com/youssefjedidi/XAI_heart_attack_classifier",
+    },
+    {
         img: "/images/tunweb.png",
         description: "a website about Tunisia , built using React framework, aiming to showcase information about Tunisian history, culture, and tourism.",
         link: "https://github.com/youssefjedidi/Tun_App",
     },
     /*
-    {
-        img: "https://picsum.photos/400/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
     {
         img: "https://picsum.photos/400/600/?grayscale",
         description: "The wisdom of life consists in the elimination of non-essentials.",

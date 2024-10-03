@@ -7,9 +7,12 @@ import { dataportfolio, meta  ,
   experience,
   skills,
   services,
+  introdata,
  } from "../../content_option";
+ import Typewriter from "typewriter-effect";
 
 export const Portfolio = () => {
+  
   return (
     <HelmetProvider>
       <Container className="About-header">
@@ -19,10 +22,31 @@ export const Portfolio = () => {
           <meta name="description" content={meta.description} />
         </Helmet>
         <Row className="mb-5 mt-3 pt-md-3">
+        <Col lg="5">
+            <h1 className="color_sec py-4"> {introdata.title} </h1>{" "}
+          </Col><div className="intro mx-auto">
+                <h2 className="fluidz-32 mb-1x">
+                  <Typewriter
+                    options={{
+                      strings: [
+                        introdata.animated.first,
+                        introdata.animated.second,
+                        introdata.animated.third,
+                        introdata.animated.fourth,
+                        introdata.animated.fifth,
+                      ],
+                      autoStart: true,
+                      loop: true,
+                      deleteSpeed: 10,
+                    }}
+                  />
+                </h2>
         <div /*style={{ display: "none" }}*/>
         <Col lg="5">
             <h1 className="color_sec py-4"> Work Timline </h1>{" "}
           </Col>
+          
+        </div>
           <table className="table caption-top">
               <tbody>
                 {experience.map((data, i) => {
