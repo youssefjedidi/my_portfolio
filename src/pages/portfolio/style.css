@@ -121,13 +121,13 @@
     transition: 0.3s ease;
     font-size: 0;
     min-height: 300px;
-    animation: hover 5s ease-in-out infinite;
+    animation: hovering 5s ease infinite;
 }
-@keyframes hover {
-    0% { transform: translate(0%, 0%) }
-    33% { transform: translate(0%, 1%) }
+@keyframes hovering {
+    0% { transform: translate(0%, 1%) }
+    33% { transform: translate(0%, 2%) }
     66% { transform: translate(0%, -1%) }
-    100% { transform: translate(0%, -0%)}
+    100% { transform: translate(0%, 1%)}
 }
 
 
@@ -187,4 +187,21 @@
 
 .po_item .content a:hover {
     text-decoration: none;
+}
+
+.Name
+{
+    color: rgb(187, 178, 223);
+    
+}
+.profile-pic {
+    width: 15vh; /* Adjust size as needed */
+    height: 15vh; /* Adjust size as needed */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    margin-left: 3vh; /* Optional: spacing between text and image */
+    align-self: center;
+    place-self: right;
+    justify-self: end;
+    animation: hovering 5s ease-in-out infinite;
 }

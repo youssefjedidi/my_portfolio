@@ -1,11 +1,11 @@
-const logotext = "YJ";
+const logotext = "Youssef Jedidi";
 const meta = {
     title: "Youssef Jedidi",
     description: "I’m Youssef Jedidi data scientist _ Full stack devloper,currently working in Montreal",
 };
 
 const introdata = {
-    title: "I’m Youssef Jedidi",
+    title: "I’m Youssef Jedidi,",
     animated: {
         first: "I develop efficient software",
         second: "I specialize in AI and ML",

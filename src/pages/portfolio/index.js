@@ -22,10 +22,21 @@ export const Portfolio = () => {
           <meta name="description" content={meta.description} />
         </Helmet>
         <Row className="mb-5 mt-3 pt-md-3">
-        <Col lg="5">
-            <h1 className="color_sec py-4"> {introdata.title} </h1>{" "}
-          </Col><div className="intro mx-auto">
-                <h2 className="fluidz-32 mb-1x">
+        <Col lg="5" style={{display:"flex", margin:"5vh", width: "100vw"}}>
+        <div>
+          <h1 style={{}}>Hello , I am </h1><h1 className="Name"> {meta.title} </h1>
+        </div>{" "}
+        <img 
+                src="/images/my_pic.jpeg" 
+                alt="Profile" 
+                className="profile-pic" 
+            />
+        </Col>
+        <p>
+        A Computer Engineering student from Canada. I aim to deepen my understanding in various areas of technology and product development.
+        </p>
+          <div className="intro mx-auto">
+                <h2 className="Name">
                   <Typewriter
                     options={{
                       strings: [
@@ -41,6 +52,23 @@ export const Portfolio = () => {
                     }}
                   />
                 </h2>
+          <Col lg="8">
+            <h1 className="display-4 mb-4"> Projects </h1>{" "}
+            <hr className="t_border my-4 ml-0 text-left" />
+          </Col>
+          <div className="mb-5 po_items_ho">
+          {dataportfolio.map((data, i) => {
+            return (
+              <div key={i} className="po_item">
+                <img src={data.img} alt="youssef jedidi , software engineering , Ai Ml , Montreal" />
+                <div className="content">
+                  <p>{data.description}</p>
+                  <a href={data.link}>view project</a>
+                </div>
+              </div>
+            );
+          })}
+        </div>
         <div /*style={{ display: "none" }}*/>
         <Col lg="5">
             <h1 className="color_sec py-4"> Experience </h1>{" "}
@@ -61,24 +89,6 @@ export const Portfolio = () => {
               </tbody>
             </table>
             </div>
-          <Col lg="8">
-            <h1 className="display-4 mb-4"> Projects </h1>{" "}
-            <hr className="t_border my-4 ml-0 text-left" />
-          </Col>
-          <div className="mb-5 po_items_ho">
-          {dataportfolio.map((data, i) => {
-            return (
-              <div key={i} className="po_item">
-                <img src={data.img} alt="youssef jedidi , software engineering , Ai Ml , Montreal" />
-                <div className="content">
-                  <p>{data.description}</p>
-                  <a href={data.link}>view project</a>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-          
             <Row className="sec_sp">
           <Col lang="5">
             <h3 className="color_sec py-4">Certificates</h3>
