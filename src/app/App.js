@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
   BrowserRouter as Router,
@@ -9,6 +10,7 @@ import AppRoutes from "./routes";
 import Headermain from "../header";
 import AnimatedCursor  from "../hooks/AnimatedCursor";
 import "./App.css";
+import Loading from "../hooks/Loading";
 
 function _ScrollToTop(props) {
   const { pathname } = useLocation();
@@ -19,7 +21,14 @@ function _ScrollToTop(props) {
 }
 const ScrollToTop = withRouter(_ScrollToTop);
 
-export default function App() {
+export default function App()  {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 3000);
+  }, []);
+  if (loading) {
+    return <Loading />;
+  }
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <div className="cursor__dot">

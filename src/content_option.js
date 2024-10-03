@@ -9,7 +9,7 @@ const introdata = {
     animated: {
         first: "I develop efficient software",
         second: "I specialize in AI and ML",
-        third: "I drive results with digital marketing.",
+        third: "I drive results with data driven decision making.",
         fourth: "I design user-centric websites.",
         fifth: "I turn data into insights.",
     },
@@ -21,11 +21,11 @@ const dataabout = {
     title: "a bit about my self",
     aboutme: "",
 };
-const worktimeline = [
+const experience = [
     {
-    jobtitle: "Software Engineering (SWE) Fellow",
-    where: "Headstarter AI",
-    date: "2024",
+    jobtitle: "Project Team Lead",
+    where: "Biomedical Engineering Club",
+    date: "2024-current",
     },
     {
         jobtitle: "Software Developper",
@@ -89,12 +89,12 @@ const services = [/*{
 const dataportfolio = [
     {
     img: "/images/abc_bank.jpg",
-    description: "ABC Bank Digital Marketing Strategy by utilizing Artificial Intelligence (AI)/  unsupervised learning for customer segmentation",
+    description: "AI-Driven Customer Segmentation & Retention Strategy for ABC Bank",
     link: "https://github.com/youssefjedidi/bank_marketing_AI",
 },
 {
     img: "/images/mlair.jpeg",
-    description: "Machine Learning Regression Models for Aircraft Noise Prediction",
+    description: "Green Aircraft Design Project",
     link: "https://github.com/youssefjedidi/Aircraft_Noise_Predictor",
     },
     {
@@ -172,7 +172,7 @@ export {
     meta,
     dataabout,
     dataportfolio,
-    worktimeline,
+    experience,
     skills,
     services,
     introdata,

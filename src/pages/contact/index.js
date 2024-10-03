@@ -4,7 +4,7 @@ import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { meta } from "../../content_option";
 import { Container, Row, Col, Alert } from "react-bootstrap";
-import { contactConfig } from "../../content_option";
+import { contactConfig , socialprofils } from "../../content_option";
 
 export const ContactUs = () => {
   const [formData, setFormdata] = useState({
@@ -95,6 +95,12 @@ export const ContactUs = () => {
           <Col lg="5" className="mb-5">
             <h3 className="color_sec py-4">Get in touch</h3>
             <address>
+            <strong>Linkedin:</strong>{" "}
+              <a href={socialprofils.linkedin}>
+              in/youssef-jedidi/
+              </a>
+              <br />
+              <br />
               <strong>Email:</strong>{" "}
               <a href={`mailto:${contactConfig.YOUR_EMAIL}`}>
                 {contactConfig.YOUR_EMAIL}

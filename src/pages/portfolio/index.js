@@ -4,7 +4,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
 import { dataportfolio, meta  ,
   dataabout,
-  worktimeline,
+  experience,
   skills,
   services,
  } from "../../content_option";
@@ -19,13 +19,13 @@ export const Portfolio = () => {
           <meta name="description" content={meta.description} />
         </Helmet>
         <Row className="mb-5 mt-3 pt-md-3">
-        <div style={{ display: "none" }}>
+        <div /*style={{ display: "none" }}*/>
         <Col lg="5">
             <h1 className="color_sec py-4"> Work Timline </h1>{" "}
           </Col>
           <table className="table caption-top">
               <tbody>
-                {worktimeline.map((data, i) => {
+                {experience.map((data, i) => {
                   return (
                     <tr key={i}>
                       <th scope="row">{data.jobtitle}</th>
