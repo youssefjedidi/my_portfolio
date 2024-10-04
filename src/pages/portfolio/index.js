@@ -10,6 +10,7 @@ import { dataportfolio, meta  ,
   introdata,
  } from "../../content_option";
  import Typewriter from "typewriter-effect";
+ import { Link } from "react-router-dom";
 
 export const Portfolio = () => {
   
@@ -109,10 +110,29 @@ export const Portfolio = () => {
               })}
 
           </Col>
+          <div className="intro_btn-action pb-5" style={{textAlign:"center"}} >
+                  <Link to="/" className="text_2">
+                    <div id="button_p" className="ac_btn btn ">
+                      Home page
+                      <div className="ring one"></div>
+                      <div className="ring two"></div>
+                      <div className="ring three"></div>
+                    </div>
+                  </Link>
+                  <Link to="/contact">
+                    <div id="button_h" className="ac_btn btn">
+                      Contact Me
+                      <div className="ring one"></div>
+                      <div className="ring two"></div>
+                      <div className="ring three"></div>
+                    </div>
+                  </Link>
+                </div>
+        
         </Row>
+        
         </Row>    
-        
-        
+       
       </Container>
     </HelmetProvider>
   );
