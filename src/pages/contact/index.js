@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import * as emailjs from "emailjs-com";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import { meta } from "../../content_option";
 import { Container, Row, Col, Alert } from "react-bootstrap";
 import { contactConfig , socialprofils } from "../../content_option";
 
@@ -69,8 +68,35 @@ export const ContactUs = () => {
       <Container>
         <Helmet>
           <meta charSet="utf-8" />
-          <title>{meta.title} | Contact</title>
-          <meta name="description" content={meta.description} />
+          <title>Contact Youssef Jedidi - Computer Engineering Student | AI/ML Developer</title>
+          <meta name="description" content="Get in touch with Youssef Jedidi, Computer Engineering student at Concordia University. Contact me for AI/ML projects, full-stack development opportunities, or collaboration inquiries." />
+          <meta name="keywords" content="contact Youssef Jedidi, Computer Engineering student, Concordia University, AI/ML developer, full-stack developer, software engineer, collaboration, project inquiries" />
+          <link rel="canonical" href="https://youssefjedidi.github.io/my_portfolio/contact" />
+
+          {/* Open Graph / Facebook */}
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://youssefjedidi.github.io/my_portfolio/contact" />
+          <meta property="og:title" content="Contact Youssef Jedidi - Computer Engineering Student | AI/ML Developer" />
+          <meta property="og:description" content="Get in touch with Youssef Jedidi for AI/ML projects, full-stack development opportunities, and collaboration inquiries." />
+          <meta property="og:image" content="https://youssefjedidi.github.io/my_portfolio/images/my_pic.jpeg" />
+          <meta property="og:image:alt" content="Contact Youssef Jedidi - Computer Engineering Student" />
+          <meta property="og:site_name" content="Youssef Jedidi Portfolio" />
+          <meta property="og:locale" content="en_US" />
+
+          {/* Twitter */}
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta property="twitter:url" content="https://youssefjedidi.github.io/my_portfolio/contact" />
+          <meta property="twitter:title" content="Contact Youssef Jedidi - Computer Engineering Student | AI/ML Developer" />
+          <meta property="twitter:description" content="Get in touch with Youssef Jedidi for AI/ML projects and full-stack development opportunities." />
+          <meta property="twitter:image" content="https://youssefjedidi.github.io/my_portfolio/images/my_pic.jpeg" />
+          <meta property="twitter:image:alt" content="Contact Youssef Jedidi - Computer Engineering Student" />
+          <meta property="twitter:creator" content="@youssefjedidi" />
+          <meta property="twitter:site" content="@youssefjedidi" />
+
+          {/* Contact specific meta */}
+          <meta name="author" content="Youssef Jedidi" />
+          <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+          <meta name="theme-color" content="#b2c4e3" />
         </Helmet>
         <Row className="mb-5 mt-3 pt-md-3">
           <Col lg="8">

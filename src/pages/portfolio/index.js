@@ -126,12 +126,43 @@ export const Portfolio = () => {
       <Container className="About-header">
         <Helmet>
           <meta charSet="utf-8" />
-          <title> Portfolio | {meta.title} </title>
-          <meta name="description" content={meta.description} />
+          <title>Portfolio | Youssef Jedidi - Computer Engineering Student | AI/ML Developer</title>
+          <meta name="description" content="Explore Youssef Jedidi's portfolio featuring AI/ML projects, full-stack web applications, and innovative software solutions. Computer Engineering student at Concordia University with expertise in React, Python, and machine learning." />
+          <meta name="keywords" content="Youssef Jedidi portfolio, AI/ML projects, Computer Engineering, Concordia University, React applications, Python development, machine learning, full-stack developer, software engineering projects" />
+          <link rel="canonical" href="https://youssefjedidi.github.io/my_portfolio/portfolio" />
+
+          {/* Open Graph / Facebook */}
+          <meta property="og:type" content="profile" />
+          <meta property="og:url" content="https://youssefjedidi.github.io/my_portfolio/portfolio" />
+          <meta property="og:title" content="Youssef Jedidi - Computer Engineering Portfolio | AI/ML Developer" />
+          <meta property="og:description" content="Computer Engineering student at Concordia University showcasing AI/ML projects, full-stack web applications, and innovative software solutions." />
+          <meta property="og:image" content="https://youssefjedidi.github.io/my_portfolio/images/my_pic.jpeg" />
+          <meta property="og:image:alt" content="Youssef Jedidi - Computer Engineering Student Portfolio" />
+          <meta property="og:site_name" content="Youssef Jedidi Portfolio" />
+          <meta property="og:locale" content="en_US" />
+          <meta property="profile:first_name" content="Youssef" />
+          <meta property="profile:last_name" content="Jedidi" />
+
+          {/* Twitter */}
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta property="twitter:url" content="https://youssefjedidi.github.io/my_portfolio/portfolio" />
+          <meta property="twitter:title" content="Youssef Jedidi - Computer Engineering Portfolio | AI/ML Developer" />
+          <meta property="twitter:description" content="Computer Engineering student at Concordia University showcasing AI/ML projects and full-stack web applications." />
+          <meta property="twitter:image" content="https://youssefjedidi.github.io/my_portfolio/images/my_pic.jpeg" />
+          <meta property="twitter:image:alt" content="Youssef Jedidi - Computer Engineering Student Portfolio" />
+          <meta property="twitter:creator" content="@youssefjedidi" />
+          <meta property="twitter:site" content="@youssefjedidi" />
+
+          {/* Performance optimizations */}
           <link rel="preload" href="/images/my_pic.jpeg" as="image" />
           <link rel="dns-prefetch" href="//fonts.googleapis.com" />
           <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+          {/* Additional SEO */}
+          <meta name="author" content="Youssef Jedidi" />
+          <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+          <meta name="theme-color" content="#b2c4e3" />
         </Helmet>
         <Row className="mb-5 mt-3 pt-md-3">
           <Col lg="8">
