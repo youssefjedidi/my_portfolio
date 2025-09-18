@@ -1,6 +1,10 @@
 MIT License
 
-Copyright (c) 2021 Ubai Mutl
+Copyright (c) 2021 Ubai Mutl (Original Work)
+Copyright (c) 2024 Youssef Jedidi (Enhancements and Modifications)
+
+Based on the original react-portfolio by Ubai Mutl
+Enhanced and maintained by Youssef Jedidi
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +23,8 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+Original Repository: https://github.com/ubaimutl/react-portfolio
+Enhanced Repository: https://github.com/youssefjedidi/my_portfolio

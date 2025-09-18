@@ -1,7 +1,24 @@
 {
-    "name": "react-portfolio",
-    "version": "0.1.0",
+    "name": "youssef-jedidi-portfolio",
+    "version": "1.0.0",
+    "description": "Youssef Jedidi - Computer Engineering Portfolio with AI/ML projects and full-stack development showcase",
+    "author": "Youssef Jedidi",
     "private": true,
+    "homepage": "https://youssefjedidi.github.io/my_portfolio/",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/youssefjedidi/my_portfolio.git"
+    },
+    "keywords": [
+        "portfolio",
+        "react",
+        "computer-engineering",
+        "ai-ml",
+        "full-stack",
+        "web-development",
+        "responsive",
+        "pwa"
+    ],
     "dependencies": {
         "bootstrap": "^5.2.3",
         "emailjs-com": "^3.2.0",

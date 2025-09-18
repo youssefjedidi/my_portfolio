@@ -446,8 +446,26 @@ export const Portfolio = () => {
               </div>
             </Link>
           </div>
-        </div>    
-       
+
+          {/* Attribution Section */}
+          <Row className="mt-5 pt-4 border-top">
+            <Col className="text-center">
+              <small className="text-muted">
+                <i className="fas fa-code me-1"></i>
+                Portfolio built with ❤️ using React |
+                <a
+                  href="https://github.com/ubaimutl/react-portfolio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-decoration-none ms-1"
+                >
+                  Based on Ubai Mutl's template
+                </a>
+              </small>
+            </Col>
+          </Row>
+        </div>
+
       </Container>
     </HelmetProvider>
     </ErrorBoundary>

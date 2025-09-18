@@ -53,7 +53,12 @@ const Headermain = () => {
             <a href={socialprofils.github}>Github</a>
             <a href={socialprofils.linkedin}>Linkedin</a>
             </div>
-            <p className="copyright m-0">copyright __ {logotext}</p>
+            <div className="text-center text-md-end">
+              <p className="copyright m-0">© 2024 {logotext}</p>
+              <small className="text-muted">
+                Based on <a href="https://github.com/ubaimutl/react-portfolio" target="_blank" rel="noopener noreferrer" className="text-decoration-none">Ubai Mutl's template</a>
+              </small>
+            </div>
           </div>
         </div>
       </header>
