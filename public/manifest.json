@@ -2,18 +2,6 @@
   "short_name": "Youssef Jedidi",
   "name": "Youssef Jedidi - Computer Engineering Portfolio",
   "description": "Computer Engineering student specializing in AI/ML and full-stack development",
-  "icons": [
-    {
-      "src": "/images/my_pic.jpeg",
-      "sizes": "192x192",
-      "type": "image/jpeg"
-    },
-    {
-      "src": "/images/my_pic.jpeg",
-      "sizes": "512x512",
-      "type": "image/jpeg"
-    }
-  ],
   "start_url": "/",
   "display": "standalone",
   "theme_color": "#b2c4e3",
