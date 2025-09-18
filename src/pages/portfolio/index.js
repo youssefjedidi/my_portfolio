@@ -1,10 +1,104 @@
-import React, { useState } from "react";
+import React, { useState, useMemo, memo } from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
 import { dataportfolio, meta, experience, services, introdata, skills, education } from "../../content_option";
 import Typewriter from "typewriter-effect";
 import { Link } from "react-router-dom";
+
+// Error Boundary Component
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Portfolio Error:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <Container className="text-center py-5">
+          <h2>Something went wrong.</h2>
+          <p>Please refresh the page or try again later.</p>
+        </Container>
+      );
+    }
+
+    return this.props.children;
+  }
+}
+
+// Memoized Project Card Component
+const ProjectCard = memo(({ data, index }) => {
+  return (
+    <Col lg="4" md="6" className="mb-4" key={index}>
+      <div className="project-card h-100">
+        <div className="card h-100 border-0 shadow-sm">
+          <div className="card-img-container">
+            <img
+              src={data.img}
+              alt={`Project: ${data.description}`}
+              className="card-img-top project-image"
+              loading="lazy"
+              decoding="async"
+              fetchpriority="low"
+              style={{
+                width: '100%',
+                height: '200px',
+                objectFit: 'cover'
+              }}
+            />
+            <div className="card-overlay">
+              <div className="overlay-content">
+                <h5 className="card-title text-white mb-3">{data.description}</h5>
+                <a
+                  href={data.link}
+                  className="btn btn-light btn-sm me-2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-github me-1"></i>
+                  View Code
+                </a>
+                <button className="btn btn-outline-light btn-sm">
+                  <i className="fas fa-eye me-1"></i>
+                  Preview
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="card-body d-flex flex-column">
+            <h6 className="card-title text-truncate mb-2">{data.description}</h6>
+            <div className="mt-auto">
+              <div className="d-flex justify-content-between align-items-center">
+                <small className="text-muted">
+                  <i className="fas fa-code-branch me-1"></i>
+                  Project {index + 1}
+                </small>
+                <a
+                  href={data.link}
+                  className="btn btn-outline-primary btn-sm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fas fa-external-link-alt me-1"></i>
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Col>
+  );
+});
 
 export const Portfolio = () => {
   // State management for show more/less functionality
@@ -15,17 +109,29 @@ export const Portfolio = () => {
   const INITIAL_PROJECTS = 6;
   const INITIAL_CERTS = 6;
   
-  // Get featured content
-  const featuredProjects = showAllProjects ? dataportfolio : dataportfolio.slice(0, INITIAL_PROJECTS);
-  const featuredCerts = showAllCerts ? services[0].description : services[0].description.slice(0, INITIAL_CERTS);
+  // Memoized featured content to prevent unnecessary recalculations
+  const featuredProjects = useMemo(() => 
+    showAllProjects ? dataportfolio : dataportfolio.slice(0, INITIAL_PROJECTS),
+    [showAllProjects]
+  );
+  
+  const featuredCerts = useMemo(() => 
+    showAllCerts ? services[0].description : services[0].description.slice(0, INITIAL_CERTS),
+    [showAllCerts]
+  );
 
   return (
-    <HelmetProvider>
+    <ErrorBoundary>
+      <HelmetProvider>
       <Container className="About-header">
         <Helmet>
           <meta charSet="utf-8" />
-          <title> Portfolio | {meta.title} </title>{" "}
+          <title> Portfolio | {meta.title} </title>
           <meta name="description" content={meta.description} />
+          <link rel="preload" href="/images/my_pic.jpeg" as="image" />
+          <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+          <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         </Helmet>
         <Row className="mb-5 mt-3 pt-md-3">
           <Col lg="8">
@@ -41,6 +147,9 @@ export const Portfolio = () => {
               alt="Profile of Youssef Jedidi"
               className="img-fluid rounded-circle profile-pic mb-3"
               style={{maxWidth: '200px', height: 'auto'}}
+              loading="lazy"
+              decoding="async"
+              fetchpriority="high"
             />
           </Col>
         </Row>
@@ -72,62 +181,9 @@ export const Portfolio = () => {
 
           <div className="mb-5">
             <Row>
-              {featuredProjects.map((data, i) => {
-                return (
-                  <Col lg="4" md="6" className="mb-4" key={i}>
-                    <div className="project-card h-100">
-                      <div className="card h-100 border-0 shadow-sm">
-                        <div className="card-img-container">
-                          <img
-                            src={data.img}
-                            alt={`Project: ${data.description}`}
-                            className="card-img-top project-image"
-                            loading="lazy"
-                          />
-                          <div className="card-overlay">
-                            <div className="overlay-content">
-                              <h5 className="card-title text-white mb-3">{data.description}</h5>
-                              <a
-                                href={data.link}
-                                className="btn btn-light btn-sm me-2"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                <i className="fab fa-github me-1"></i>
-                                View Code
-                              </a>
-                              <button className="btn btn-outline-light btn-sm">
-                                <i className="fas fa-eye me-1"></i>
-                                Preview
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="card-body d-flex flex-column">
-                          <h6 className="card-title text-truncate mb-2">{data.description}</h6>
-                          <div className="mt-auto">
-                            <div className="d-flex justify-content-between align-items-center">
-                              <small className="text-muted">
-                                <i className="fas fa-code-branch me-1"></i>
-                                Project {i + 1}
-                              </small>
-                              <a
-                                href={data.link}
-                                className="btn btn-outline-primary btn-sm"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                <i className="fas fa-external-link-alt me-1"></i>
-                                Live Demo
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </Col>
-                );
-              })}
+              {featuredProjects.map((data, i) => (
+                <ProjectCard key={i} data={data} index={i} />
+              ))}
             </Row>
             
             {/* View More Projects Button */}
@@ -363,5 +419,6 @@ export const Portfolio = () => {
        
       </Container>
     </HelmetProvider>
+    </ErrorBoundary>
   );
 };

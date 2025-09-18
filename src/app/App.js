@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, memo } from "react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
@@ -12,23 +12,27 @@ import AnimatedCursor  from "../hooks/AnimatedCursor";
 import "./App.css";
 import Loading from "../hooks/Loading";
 
-function _ScrollToTop(props) {
+const ScrollToTop = memo(withRouter(function _ScrollToTop(props) {
   const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
   return props.children;
-}
-const ScrollToTop = withRouter(_ScrollToTop);
+}));
 
-export default function App()  {
+const App = memo(function App() {
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    setTimeout(() => setLoading(false), 3000);
+    // Reduced loading time for better performance
+    const timer = setTimeout(() => setLoading(false), 1500);
+    return () => clearTimeout(timer);
   }, []);
+
   if (loading) {
     return <Loading />;
   }
+
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <div className="cursor__dot">
@@ -47,4 +51,6 @@ export default function App()  {
       </ScrollToTop>
     </Router>
   );
-}
+});
+
+export default App;

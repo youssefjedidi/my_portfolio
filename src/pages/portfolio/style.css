@@ -578,38 +578,23 @@
     }
 }
 
-/* View More/Less Button Styles */
-.btn-outline-primary {
-    border-color: rgb(178, 194, 223);
-    color: rgb(178, 194, 223);
-    border-radius: 25px;
-    padding: 0.75rem 1.5rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    background: transparent;
+/* Performance Optimizations */
+.project-image {
+    transition: transform 0.3s ease;
+    will-change: transform;
 }
 
-.btn-outline-primary:hover {
-    background-color: rgb(178, 194, 223);
-    color: var(--bg-color);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(178, 194, 223, 0.3);
-    border-color: rgb(178, 194, 223);
+.card-overlay {
+    will-change: opacity;
+    backface-visibility: hidden;
 }
 
-.btn-outline-primary:focus {
-    box-shadow: 0 0 0 0.2rem rgba(178, 194, 223, 0.25);
+.skill-tag {
+    will-change: transform;
+    backface-visibility: hidden;
 }
 
-/* Smooth expand/collapse animations */
-.project-card {
-    transition: all 0.3s ease;
-}
-
-.project-card:nth-child(n+5) {
-    animation: fadeInUp 0.6s ease-out;
-}
-
+/* Optimize animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -619,15 +604,6 @@
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/* Certification expand animation */
-.certification-item {
-    transition: all 0.3s ease;
-}
-
-.certification-item:nth-child(n+7) {
-    animation: slideInLeft 0.5s ease-out;
 }
 
 @keyframes slideInLeft {
@@ -641,15 +617,21 @@
     }
 }
 
-/* Enhanced mobile responsiveness for view more buttons */
-@media (max-width: 768px) {
-    .btn-outline-primary {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.9rem;
-    }
-    
-    .btn-outline-primary.btn-lg {
-        padding: 0.75rem 1.5rem;
-        font-size: 1rem;
-    }
+/* GPU acceleration for better performance */
+.project-card,
+.skill-category,
+.card {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Optimize font loading */
+.Name {
+    font-display: swap;
+}
+
+/* Reduce paint on scroll */
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
