@@ -14,24 +14,24 @@ export const Home = () => {
           <title>Youssef Jedidi - Computer Engineering Student | AI/ML Developer Portfolio</title>
           <meta name="description" content="Welcome to Youssef Jedidi's portfolio. Computer Engineering student at Concordia University specializing in AI/ML, full-stack development, and innovative software solutions. Explore my projects and get in touch." />
           <meta name="keywords" content="Youssef Jedidi, Computer Engineering, Concordia University, AI/ML, Machine Learning, Full Stack Developer, Software Engineer, Portfolio, React Developer, Python Developer" />
-          <link rel="canonical" href="https://youssefjedidi.github.io/my_portfolio/" />
+          <link rel="canonical" href="https://youssefjedidi.vercel.app/" />
 
           {/* Open Graph / Facebook */}
           <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://youssefjedidi.github.io/my_portfolio/" />
+          <meta property="og:url" content="https://youssefjedidi.vercel.app/" />
           <meta property="og:title" content="Youssef Jedidi - Computer Engineering Student | AI/ML Developer Portfolio" />
           <meta property="og:description" content="Computer Engineering student at Concordia University specializing in AI/ML and full-stack development. Explore my innovative software solutions and projects." />
-          <meta property="og:image" content="https://youssefjedidi.github.io/my_portfolio/images/my_pic.jpeg" />
+          <meta property="og:image" content="https://youssefjedidi.vercel.app/images/my_pic.jpeg" />
           <meta property="og:image:alt" content="Youssef Jedidi - Computer Engineering Student" />
           <meta property="og:site_name" content="Youssef Jedidi Portfolio" />
           <meta property="og:locale" content="en_US" />
 
           {/* Twitter */}
           <meta property="twitter:card" content="summary_large_image" />
-          <meta property="twitter:url" content="https://youssefjedidi.github.io/my_portfolio/" />
+          <meta property="twitter:url" content="https://youssefjedidi.vercel.app/" />
           <meta property="twitter:title" content="Youssef Jedidi - Computer Engineering Student | AI/ML Developer Portfolio" />
           <meta property="twitter:description" content="Computer Engineering student at Concordia University specializing in AI/ML and full-stack development." />
-          <meta property="twitter:image" content="https://youssefjedidi.github.io/my_portfolio/images/my_pic.jpeg" />
+          <meta property="twitter:image" content="https://youssefjedidi.vercel.app/images/my_pic.jpeg" />
           <meta property="twitter:image:alt" content="Youssef Jedidi - Computer Engineering Student" />
           <meta property="twitter:creator" content="@youssefjedidi" />
           <meta property="twitter:site" content="@youssefjedidi" />

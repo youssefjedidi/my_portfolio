@@ -4,7 +4,7 @@
     "description": "Youssef Jedidi - Computer Engineering Portfolio with AI/ML projects and full-stack development showcase",
     "author": "Youssef Jedidi",
     "private": true,
-    "homepage": "https://youssefjedidi.github.io/my_portfolio/",
+    "homepage": "https://youssefjedidi.vercel.app",
     "repository": {
         "type": "git",
         "url": "https://github.com/youssefjedidi/my_portfolio.git"
