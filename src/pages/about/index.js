@@ -3,10 +3,8 @@ import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
 import {
-  dataabout,
   meta,
   experience,
-  skills,
   services,
 } from "../../content_option";
 
@@ -27,11 +25,11 @@ export const About = () => {
         </Row>
         <Row className="sec_sp">
           <Col lg="5">
-            <h3 className="color_sec py-4">{dataabout.title}</h3>
+            <h3 className="color_sec py-4">About Me</h3>
           </Col>
           <Col lg="7" className="d-flex align-items-center">
             <div>
-              <p>{dataabout.aboutme}</p>
+              <p>Computer Engineering student at Concordia University with a passion for AI/ML and full-stack development. Experienced in building scalable software solutions, from ML pipelines to web applications, with a focus on clean code and innovative problem-solving.</p>
             </div>
           </Col>
         </Row>
