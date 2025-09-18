@@ -83,10 +83,10 @@ const services = [
             "AWS Educate Machine Learning Foundations By Amazon Web Services (AWS)",
             "Disaster Risk Monitoring Using Satellite Imagery by NVIDIA",
             "Structuring Machine Learning Projects By DeepLearning.AI",
-            "Foundations of Cybersecurity By Google",
             "AWS Introduction | Initiation à AWS By CMAI - Canadian Mobility and Aerospace Institute (IMACA)",
             "Software Engineering Job Simulation By Goldman Sachs",
             "Data Analytics and Visualization Job Simulation by Accenture North America",
+            "Foundations of Cybersecurity By Google",
             "Intro. to Game Development by GOMYCODE",
             "Digital Marketing By Accenture",
             "Learn to Program: The Fundamentals by University of Toronto"
@@ -102,8 +102,18 @@ const dataportfolio = [
 },
 {
     img: "/images/HeartXAI.jpeg",
-    description: "Heart Attack Dataset Analysis XAI (explainable artificial intelligence) Project",
-    link: "https://github.com/youssefjedidi/XAI_heart_attack_classifier",
+    description: "AI Dermatology Diagnostic Tool - CNN-based skin condition classifier achieving 82.1% accuracy, optimized for mobile deployment with TensorFlow Lite",
+    link: "https://github.com/youssefjedidi/dermatology-ai-tool",
+},
+{
+    img: "/images/mlair.jpeg", 
+    description: "Automated Airport Operations Monitor & Reporter - Real-time flight data pipeline with GCP deployment, automated Slack alerts, and KPI reporting",
+    link: "https://github.com/youssefjedidi/airport-operations-monitor",
+},
+{
+    img: "/images/tunweb.png",
+    description: "Interactive Algorithm Visualization Platform - Educational web platform visualizing sorting and pathfinding algorithms with 60fps performance",
+    link: "https://github.com/youssefjedidi/algorithm-visualization-platform",
 },
 {
     img: "/images/mlair.jpeg",
@@ -122,18 +132,8 @@ const dataportfolio = [
     },
     {
         img: "/images/HeartXAI.jpeg",
-        description: "AI Dermatology Diagnostic Tool - CNN-based skin condition classifier achieving 82.1% accuracy, optimized for mobile deployment with TensorFlow Lite",
-        link: "https://github.com/youssefjedidi/dermatology-ai-tool",
-    },
-    {
-        img: "/images/mlair.jpeg", 
-        description: "Automated Airport Operations Monitor & Reporter - Real-time flight data pipeline with GCP deployment, automated Slack alerts, and KPI reporting",
-        link: "https://github.com/youssefjedidi/airport-operations-monitor",
-    },
-    {
-        img: "/images/tunweb.png",
-        description: "Interactive Algorithm Visualization Platform - Educational web platform visualizing sorting and pathfinding algorithms with 60fps performance",
-        link: "https://github.com/youssefjedidi/algorithm-visualization-platform",
+        description: "Heart Attack Dataset Analysis XAI (explainable artificial intelligence) Project",
+        link: "https://github.com/youssefjedidi/XAI_heart_attack_classifier",
     },
 ];
 

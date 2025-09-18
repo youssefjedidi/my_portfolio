@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
 import { dataportfolio, meta, experience, services, introdata, skills, education } from "../../content_option";
- import Typewriter from "typewriter-effect";
- import { Link } from "react-router-dom";
+import Typewriter from "typewriter-effect";
+import { Link } from "react-router-dom";
 
 export const Portfolio = () => {
+  // State management for show more/less functionality
+  const [showAllProjects, setShowAllProjects] = useState(false);
+  const [showAllCerts, setShowAllCerts] = useState(false);
   
+  // Display limits
+  const INITIAL_PROJECTS = 6;
+  const INITIAL_CERTS = 6;
+  
+  // Get featured content
+  const featuredProjects = showAllProjects ? dataportfolio : dataportfolio.slice(0, INITIAL_PROJECTS);
+  const featuredCerts = showAllCerts ? services[0].description : services[0].description.slice(0, INITIAL_CERTS);
+
   return (
     <HelmetProvider>
       <Container className="About-header">
@@ -17,17 +28,18 @@ export const Portfolio = () => {
           <meta name="description" content={meta.description} />
         </Helmet>
         <Row className="mb-5 mt-3 pt-md-3">
-          <Col lg="8" className="d-flex align-items-center">
+          <Col lg="8">
             <div>
               <h1 className="mb-3">Hello, I am <span className="Name">{meta.title}</span></h1>
-              <p className="lead">A Computer Engineering student from Canada. I aim to deepen my understanding in various areas of technology and product development.</p>
+              <p className="lead d-none d-md-block">Computer Engineering student at Concordia University with a passion for AI/ML and full-stack development. Experienced in building scalable software solutions, from ML pipelines to web applications, with a focus on clean code and innovative problem-solving.</p>
+              <p className="lead d-md-none">Computer Engineering student specializing in AI/ML and full-stack development. Building scalable software solutions with clean code and innovative problem-solving.</p>
             </div>
           </Col>
-          <Col lg="4" className="text-center">
-            <img 
-              src="/images/my_pic.jpeg" 
-              alt="Profile of Youssef Jedidi" 
-              className="img-fluid rounded-circle profile-pic mb-3" 
+          <Col lg="4" className="text-center d-none d-md-block">
+            <img
+              src="/images/my_pic.jpeg"
+              alt="Profile of Youssef Jedidi"
+              className="img-fluid rounded-circle profile-pic mb-3"
               style={{maxWidth: '200px', height: 'auto'}}
             />
           </Col>
@@ -60,7 +72,7 @@ export const Portfolio = () => {
 
           <div className="mb-5">
             <Row>
-              {dataportfolio.map((data, i) => {
+              {featuredProjects.map((data, i) => {
                 return (
                   <Col lg="4" md="6" className="mb-4" key={i}>
                     <div className="project-card h-100">
@@ -117,6 +129,30 @@ export const Portfolio = () => {
                 );
               })}
             </Row>
+            
+            {/* View More Projects Button */}
+            {dataportfolio.length > INITIAL_PROJECTS && (
+              <Row className="mt-4">
+                <Col className="text-center">
+                  <button 
+                    className="btn btn-outline-primary btn-lg"
+                    onClick={() => setShowAllProjects(!showAllProjects)}
+                  >
+                    {showAllProjects ? (
+                      <>
+                        <i className="fas fa-chevron-up me-2"></i>
+                        Show Less Projects
+                      </>
+                    ) : (
+                      <>
+                        <i className="fas fa-chevron-down me-2"></i>
+                        View {dataportfolio.length - INITIAL_PROJECTS} More Projects
+                      </>
+                    )}
+                  </button>
+                </Col>
+              </Row>
+            )}
           </div>
 
           <Row className="mb-5">
@@ -225,29 +261,47 @@ export const Portfolio = () => {
 
           <Row className="sec_sp mb-5">
             <Col lg="12">
-              <h3 className="color_sec py-4">Professional Development</h3>
+              <h3 className="color_sec py-4">Professional Development & Certifications</h3>
             </Col>
-            {services.map((data, i) => {
-              return (
-                <Col lg="12" key={i}>
-                  <div className="card h-100">
-                    <div className="card-body">
-                      <h5 className="card-title">{data.title}</h5>
-                      <div className="row">
-                        {data.description.map((desc, index) => (
-                          <div key={index} className="col-md-6 mb-2">
-                            <div className="d-flex align-items-center">
-                              <i className="fas fa-certificate text-primary me-2"></i>
-                              <span>{desc}</span>
-                            </div>
-                          </div>
-                        ))}
+            <Col lg="12" key={0}>
+              <div className="card h-100">
+                <div className="card-body">
+                  <h5 className="card-title">{services[0].title}</h5>
+                  <div className="row">
+                    {featuredCerts.map((desc, index) => (
+                      <div key={index} className="col-md-6 mb-2 certification-item">
+                        <div className="d-flex align-items-center">
+                          <i className="fas fa-certificate text-primary me-2"></i>
+                          <span>{desc}</span>
+                        </div>
                       </div>
-                    </div>
+                    ))}
                   </div>
-                </Col>
-              );
-            })}
+                  
+                  {/* View More Certifications Button */}
+                  {services[0].description.length > INITIAL_CERTS && (
+                    <div className="text-center mt-4">
+                      <button 
+                        className="btn btn-outline-primary"
+                        onClick={() => setShowAllCerts(!showAllCerts)}
+                      >
+                        {showAllCerts ? (
+                          <>
+                            <i className="fas fa-chevron-up me-2"></i>
+                            Show Less Certifications
+                          </>
+                        ) : (
+                          <>
+                            <i className="fas fa-chevron-down me-2"></i>
+                            View {services[0].description.length - INITIAL_CERTS} More Certifications
+                          </>
+                        )}
+                      </button>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </Col>
           </Row>
 
           <Row className="mb-5">
