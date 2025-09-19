@@ -1,7 +1,7 @@
 # AI Coding Guidelines for Youssef Jedidi Portfolio
 
 ## Project Overview
-This is a React-based personal portfolio website for Youssef Jedidi, a Computer Engineering student specializing in AI/ML and web development. The site showcases projects, experience, skills, and provides contact functionality.
+This is a React-based personal portfolio website for Youssef Jedidi, a Computer Engineering student specializing in AI/ML and web development. The site showcases projects, experience, skills, and provides contact functionality. **Recently migrated from GitHub Pages to Vercel for improved performance and reliability.**
 
 ## Architecture & Key Patterns
 
@@ -24,14 +24,19 @@ src/
 ├── components/
 │   ├── socialicons/ (floating social links)
 │   └── themetoggle/ (dark/light theme switcher)
+├── hooks/
+│   ├── AnimatedCursor.js
+│   ├── Loading.js
+│   └── withRouter.js
 └── header/ (responsive navigation with hamburger menu)
 ```
 
 ### Routing & Navigation
-- Uses React Router v6 with `basename={process.env.PUBLIC_URL}` for GitHub Pages deployment
+- Uses React Router v6 with `basename={process.env.PUBLIC_URL}` for deployment flexibility
 - Page transitions via `react-transition-group` CSSTransition (400ms enter/exit)
 - Navigation menu toggles `document.body.classList.toggle("ovhidden")` to prevent scrolling
 - About page route exists but is commented out in header navigation
+- **Vercel Configuration**: `vercel.json` handles SPA routing for client-side navigation
 
 ## Styling & Theming
 
@@ -46,6 +51,7 @@ src/
 - **Framer Motion**: Available for complex animations (currently underutilized)
 - **Custom Button Animations**: Ring effects with CSS classes (`ring one/two/three`)
 - **Page Transitions**: CSSTransition with `page` className for smooth routing
+- **Loading Animation**: 3-second initial load screen with custom CSS
 
 ## External Integrations
 
@@ -53,6 +59,7 @@ src/
 ```javascript
 // Configuration in content_option.js
 contactConfig = {
+  YOUR_EMAIL: "youssefjedidi2022@gmail.com",
   YOUR_SERVICE_ID: "service_upiqsbk",
   YOUR_TEMPLATE_ID: "template_gn0t00c",
   YOUR_USER_ID: "nWW-hP5g0boErypRe"
@@ -61,32 +68,53 @@ contactConfig = {
 - Form submission sends to `youssefjedidi2022@gmail.com`
 - Success/error handling with Bootstrap Alert component
 - Loading state shows "Sending..." button text
+- Error handling includes scroll-to-view for user feedback
 
 ### Google Analytics
 - Tracking ID: `G-379KCVV4Y4`
 - Script loaded in `public/index.html`
+- GDPR-compliant implementation
+
+### SEO & Performance
+- **Structured Data**: JSON-LD schema markup for rich search results
+- **Meta Tags**: Comprehensive Open Graph and Twitter Card support
+- **Sitemap**: XML sitemap for search engine crawling
+- **Robots.txt**: Search engine directives
+- **Canonical URLs**: Proper URL canonicalization for Vercel deployment
 
 ## Development Workflow
 
 ### Build & Deployment
 ```bash
-npm start          # Development server
-npm run build      # Production build
-npm run predeploy  # Build + copy index.html to 404.html for SPA routing
-npm run deploy     # Deploy to GitHub Pages via gh-pages
+npm start          # Development server (localhost:3000)
+npm run build      # Production build optimized for Vercel
+npm run build:analyze  # Bundle analysis with webpack-bundle-analyzer
 ```
+
+### Vercel Deployment
+- **Homepage Configuration**: `package.json` homepage set to `https://youssefjedidi.vercel.app`
+- **Build Settings**: Optimized for Vercel serverless functions
+- **Asset Paths**: Root-relative paths for Vercel hosting
+- **SPA Routing**: `vercel.json` handles client-side routing
+
+### ESLint Configuration
+- **Custom Config**: `.eslintrc.js` with service worker support
+- **Service Worker Globals**: `self`, `caches`, `fetch`, `clients` properly defined
+- **React App Standards**: Extends default Create React App ESLint rules
+- **VS Code Integration**: Proper ESLint integration with workspace settings
 
 ### Key Development Patterns
 - **SEO Optimization**: Use `react-helmet-async` for page-specific meta tags
 - **Image Assets**: Store in `public/images/` and reference as `/images/filename.jpg`
 - **Responsive Images**: Use Bootstrap responsive classes and custom CSS
-- **Social Links**: Configure in `socialprofils` object (GitHub, LinkedIn active; Facebook commented out)
+- **Social Links**: Configure in `socialprofils` object (GitHub, LinkedIn active)
+- **Error Boundaries**: Graceful error handling throughout the application
 
 ## Common Tasks
 
 ### Adding Portfolio Projects
 1. Add image to `public/images/`
-2. Update `dataportfolio` array in `content_option.js`:
+2. Update `dataportfolio` array in `src/content_option.js`:
 ```javascript
 {
   img: "/images/new-project.jpg",
@@ -111,15 +139,19 @@ npm run deploy     # Deploy to GitHub Pages via gh-pages
 - Persists across sessions via localStorage
 
 ## Code Quality Notes
-- Commented-out code indicates planned features (About page, additional portfolio items)
-- Loading screen shows for 3 seconds on initial load
-- Animated cursor uses `react-intersection-observer` pattern
-- EmailJS error handling includes scroll-to-view for alerts
+- **ESLint Configuration**: Custom `.eslintrc.js` with service worker support
+- **Service Worker**: Enhanced caching strategy with proper error handling
+- **PWA Features**: Manifest.json and service worker for offline functionality
+- **Performance**: Optimized bundle with source maps disabled in production
+- **Accessibility**: ARIA labels and semantic HTML throughout
+- **Error Handling**: Comprehensive error boundaries and user feedback
 
 ## Performance Considerations
-- Images loaded from `/images/` (consider optimization for production)
-- Typewriter animation runs continuously (consider pause on page blur)
-- Bootstrap CSS loaded globally (consider tree-shaking for unused components)
+- **Bundle Optimization**: Source maps disabled for production builds
+- **Image Optimization**: Consider lazy loading for portfolio images
+- **Caching Strategy**: Service worker implements intelligent caching
+- **Code Splitting**: React.lazy() available for route-based splitting
+- **Build Analysis**: `npm run build:analyze` for bundle optimization
 
 ## Testing Patterns
 
@@ -140,7 +172,7 @@ describe('ContactUs Component', () => {
     render(<ContactUs />);
     expect(screen.getByText('Contact Me')).toBeInTheDocument();
   });
-  
+
   test('handles form submission', () => {
     render(<ContactUs />);
     // Test form validation and submission logic
@@ -152,6 +184,7 @@ describe('ContactUs Component', () => {
 - **EmailJS Integration**: Mock external API calls using `jest.mock()`
 - **Router Testing**: Use `MemoryRouter` for component testing with routing
 - **Theme Testing**: Test theme toggle functionality and localStorage persistence
+- **PWA Testing**: Test service worker registration and caching behavior
 
 ### Test Coverage Goals
 - **Minimum Coverage**: 80% for critical components (forms, navigation, data display)
@@ -180,6 +213,7 @@ src/
 - **Functional Components**: Prefer functional components with hooks over class components
 - **Props Interface**: Document component props with PropTypes or TypeScript (future migration)
 - **Default Exports**: Use default exports for components, named exports for utilities
+- **Error Boundaries**: Implement error boundaries for robust error handling
 
 ### Naming Conventions
 - **Components**: PascalCase (e.g., `PortfolioItem`, `ContactForm`)
@@ -202,17 +236,47 @@ import './style.css';                         // Styles
 - **Global State**: Leverage `content_option.js` for shared data
 - **Side Effects**: Use `useEffect` for API calls, DOM manipulation, and subscriptions
 - **Custom Hooks**: Extract complex stateful logic into reusable hooks
+- **Context API**: Available for global state management if needed
 
 ### Error Handling Patterns
 - **User-Friendly Messages**: Display meaningful error messages to users
 - **Graceful Degradation**: Ensure app remains functional during errors
 - **Logging**: Use `console.error()` for debugging, remove in production
 - **Form Validation**: Implement client-side validation with visual feedback
+- **Service Worker**: Robust error handling for offline functionality
 
 ### Code Quality Standards
-- **ESLint Configuration**: Follow React app default linting rules
+- **ESLint Configuration**: Custom `.eslintrc.js` with comprehensive rules
 - **Consistent Formatting**: Use consistent indentation and spacing
 - **Accessibility**: Include ARIA labels and semantic HTML where appropriate
 - **Performance**: Optimize re-renders with `React.memo()` for expensive components
-- **Bundle Size**: Monitor and optimize bundle size for production builds</content>
+- **Bundle Size**: Monitor and optimize bundle size for production builds
+- **Security**: No sensitive credentials in client-side code
+
+## Deployment Checklist
+
+### Pre-Deployment
+- [ ] Run `npm run build` successfully
+- [ ] Test build locally with `serve -s build`
+- [ ] Verify all routes work in production build
+- [ ] Check console for any errors
+- [ ] Validate PWA functionality (manifest, service worker)
+- [ ] Test contact form functionality
+- [ ] Verify SEO meta tags and structured data
+
+### Vercel Deployment
+- [ ] Push all changes to GitHub main branch
+- [ ] Import project in Vercel dashboard
+- [ ] Configure build settings if needed
+- [ ] Set environment variables if required
+- [ ] Deploy and verify live site
+- [ ] Test all functionality on live site
+
+### Post-Deployment
+- [ ] Verify Google Analytics tracking
+- [ ] Test contact form submissions
+- [ ] Check SEO meta tags with online validators
+- [ ] Validate structured data with Google's tool
+- [ ] Test PWA installation and offline functionality
+- [ ] Verify responsive design on mobile devices</content>
 <parameter name="filePath">/Volumes/PSSD T7/yj_dev/my_portfolio/.github/copilot-instructions.md
