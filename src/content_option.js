@@ -103,17 +103,17 @@ const dataportfolio = [
 {
     img: "/images/HeartXAI.jpeg",
     description: "AI Dermatology Diagnostic Tool - CNN-based skin condition classifier achieving 82.1% accuracy, optimized for mobile deployment with TensorFlow Lite",
-    link: "https://github.com/youssefjedidi/dermatology-ai-tool",
+    link: "https://github.com/youssefjedidi/AI-Dermatology-Project",
 },
 {
     img: "/images/mlair.jpeg", 
     description: "Automated Airport Operations Monitor & Reporter - Real-time flight data pipeline with GCP deployment, automated Slack alerts, and KPI reporting",
-    link: "https://github.com/youssefjedidi/airport-operations-monitor",
+    link: "https://github.com/youssefjedidi/airport-operations-pipeline",
 },
 {
     img: "/images/tunweb.png",
     description: "Interactive Algorithm Visualization Platform - Educational web platform visualizing sorting and pathfinding algorithms with 60fps performance",
-    link: "https://github.com/youssefjedidi/algorithm-visualization-platform",
+    link: "https://github.com/youssefjedidi/DSA_Website",
 },
 {
     img: "/images/mlair.jpeg",
