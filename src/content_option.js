@@ -37,7 +37,7 @@ const experience = [
     {
         jobtitle: "Software Developer",
         where: "Space Concordia",
-        date: "2022 – Present",
+        date: "Oct. 2022 – May 2024",
     },
 ];
 
