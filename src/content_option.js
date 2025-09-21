@@ -98,41 +98,51 @@ const dataportfolio = [
     {
     img: "/images/abc_bank.jpg",
     description: "Customer Churn Prediction System - Built ML model achieving 85% ROC AUC with SHAP explainability, identifying $2.27M in annual revenue at risk through targeted retention strategies.",
+    mobileDescription: "ML Churn Prediction - 85% ROC AUC, $2.27M revenue protection",
     link: "https://github.com/youssefjedidi/bank_marketing_AI",
 },
 {
     img: "/images/HeartXAI.jpeg",
     description: "AI Dermatology Diagnostic Tool - CNN-based skin condition classifier achieving 82.1% accuracy, optimized for mobile deployment with TensorFlow Lite",
+    mobileDescription: "AI Skin Diagnosis - 82.1% accuracy CNN classifier",
     link: "https://github.com/youssefjedidi/AI-Dermatology-Project",
 },
 {
     img: "/images/mlair.jpeg", 
     description: "Automated Airport Operations Monitor & Reporter - Real-time flight data pipeline with GCP deployment, automated Slack alerts, and KPI reporting",
+    mobileDescription: "Airport Ops Monitor - GCP pipeline with Slack alerts",
     link: "https://github.com/youssefjedidi/airport-operations-pipeline",
 },
 {
     img: "/images/tunweb.png",
     description: "Interactive Algorithm Visualization Platform - Educational web platform visualizing sorting and pathfinding algorithms with 60fps performance",
+    mobileDescription: "Algorithm Visualizer - Interactive sorting & pathfinding demos",
     link: "https://github.com/youssefjedidi/DSA_Website",
+    liveDemo: "https://dsamaster.vercel.app/",
 },
 {
     img: "/images/mlair.jpeg",
     description: "Green Aircraft Design Project",
+    mobileDescription: "Green Aircraft Design - Noise prediction modeling",
     link: "https://github.com/youssefjedidi/Aircraft_Noise_Predictor",
     },   
     {
         img: "/images/tunweb.png",
         description: "a website about Tunisia , built using React framework, aiming to showcase information about Tunisian history, culture, and tourism.",
+        mobileDescription: "Tunisia Tourism Website - React-based cultural showcase",
         link: "https://github.com/youssefjedidi/Tun_App",
+        liveDemo: "https://youssefjedidi.github.io/Tun_App",
     },
     {
         img: "/images/gamejam.jpg",
         description: '"A New Dawn" is a 2D Unity game developed for the Brackeys Game Jam 2023.1 competition',
+        mobileDescription: "Unity Game Jam - 2D adventure game",
         link: "https://github.com/youssefjedidi/A_New_Dawn",
     },
     {
         img: "/images/HeartXAI.jpeg",
         description: "Heart Attack Dataset Analysis XAI (explainable artificial intelligence) Project",
+        mobileDescription: "XAI Heart Attack Classifier - Explainable ML model",
         link: "https://github.com/youssefjedidi/XAI_heart_attack_classifier",
     },
 ];

@@ -57,7 +57,8 @@ const ProjectCard = memo(({ data, index }) => {
             />
             <div className="card-overlay">
               <div className="overlay-content">
-                <h5 className="card-title text-white mb-3">{data.description}</h5>
+                <h5 className="card-title text-white mb-3 d-none d-md-block">{data.description}</h5>
+                <h5 className="card-title text-white mb-3 d-md-none">{data.mobileDescription || data.description}</h5>
                 <a
                   href={data.link}
                   className="btn btn-light btn-sm me-2"
@@ -67,30 +68,51 @@ const ProjectCard = memo(({ data, index }) => {
                   <i className="fab fa-github me-1"></i>
                   View Code
                 </a>
-                <button className="btn btn-outline-light btn-sm">
-                  <i className="fas fa-eye me-1"></i>
-                  Preview
-                </button>
+                {data.liveDemo && (
+                  <a
+                    href={data.liveDemo}
+                    className="btn btn-outline-light btn-sm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="fas fa-external-link-alt me-1"></i>
+                    Live Demo
+                  </a>
+                )}
               </div>
             </div>
           </div>
           <div className="card-body d-flex flex-column">
-            <h6 className="card-title text-truncate mb-2">{data.description}</h6>
+            <h6 className="card-title text-truncate mb-2 d-none d-md-block">{data.description}</h6>
+            <h6 className="card-title text-truncate mb-2 d-md-none">{data.mobileDescription || data.description}</h6>
             <div className="mt-auto">
               <div className="d-flex justify-content-between align-items-center">
                 <small className="text-muted">
                   <i className="fas fa-code-branch me-1"></i>
                   Project {index + 1}
                 </small>
-                <a
-                  href={data.link}
-                  className="btn btn-outline-primary btn-sm"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="fas fa-external-link-alt me-1"></i>
-                  Live Demo
-                </a>
+                <div className="d-flex gap-2">
+                  {data.liveDemo && (
+                    <a
+                      href={data.liveDemo}
+                      className="btn btn-outline-primary btn-sm"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="fas fa-external-link-alt me-1"></i>
+                      Live Demo
+                    </a>
+                  )}
+                  <a
+                    href={data.link}
+                    className="btn btn-outline-secondary btn-sm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="fab fa-github me-1"></i>
+                    Code
+                  </a>
+                </div>
               </div>
             </div>
           </div>
